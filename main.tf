@@ -1,5 +1,5 @@
 module "vpc" {
-  source = "git::https://github.com/raghudevopsb73/tf-module-vpc.git"
+  source = "git::https://github.com/prabhudevops123/tf-module-vpc.git"
 
   for_each   = var.vpc
   cidr_block = each.value["cidr_block"]
@@ -13,7 +13,7 @@ module "vpc" {
 }
 
 module "rabbitmq" {
-  source = "git::https://github.com/raghudevopsb73/tf-module-rabbitmq.git"
+  source = "git::https://github.com/prabhudevops123/tf-module-rabbitmq.git"
 
   for_each      = var.rabbitmq
   component     = each.value["component"]
@@ -31,7 +31,7 @@ module "rabbitmq" {
 }
 
 module "rds" {
-  source = "git::https://github.com/raghudevopsb73/tf-module-rds.git"
+  source = "git::https://github.com/prabhudevops123/tf-module-rds.git"
 
   for_each       = var.rds
   component      = each.value["component"]
@@ -51,7 +51,7 @@ module "rds" {
 }
 
 module "documentdb" {
-  source = "git::https://github.com/raghudevopsb73/tf-module-documentdb.git"
+  source = "git::https://github.com/prabhudevops123/tf-module-documentdb.git"
 
   for_each          = var.documentdb
   component         = each.value["component"]
@@ -69,7 +69,7 @@ module "documentdb" {
 }
 
 module "elasticache" {
-  source = "git::https://github.com/raghudevopsb73/tf-module-elasticache.git"
+  source = "git::https://github.com/prabhudevops123/tf-module-elasticache.git"
 
   for_each                = var.elasticache
   component               = each.value["component"]
@@ -133,7 +133,7 @@ module "elasticache" {
 //}
 
 module "eks" {
-  source = "git::https://github.com/raghudevopsb73/tf-module-eks.git"
+  source = "git::https://github.com/prabhudevops123/tf-module-eks.git"
 
   for_each       = var.eks
   subnet_ids     = lookup(lookup(lookup(lookup(module.vpc, "main", null), "subnet_ids", null), each.value["subnet_ref"], null), "subnet_ids", null)
