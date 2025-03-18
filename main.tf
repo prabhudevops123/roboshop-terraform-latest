@@ -51,7 +51,7 @@ module "rds" {
 }
 
 module "documentdb" {
-  source = "git::https://github.com/prabhudevops123/tf-module-documentdb.git"
+  source = "git::https://github.com/prabhudevops123/tf-module-docdb.git"
 
   for_each          = var.documentdb
   component         = each.value["component"]
