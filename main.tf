@@ -1,6 +1,6 @@
 module "test" {
  source = "git::https://github.com/prabhudevops123/tf-module-app-latest.git"
- env    = "var.env"
+ env    = "dev"
 }
 #module "vpc" {
 #  source = "git::https://github.com/prabhudevops123/tf-module-vpc.git"
