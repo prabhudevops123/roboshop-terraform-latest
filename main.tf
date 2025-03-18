@@ -107,7 +107,7 @@ module "elasticache" {
 //
 //  depends_on = [module.vpc, module.rabbitmq, module.documentdb, module.elasticache, module.alb, module.rds]
 //
-//  source = "git::https://github.com/raghudevopsb73/tf-module-app.git"
+//  source = "git::https://github.com/prabhudevops123/tf-module-app-latest.git"
 //
 //  for_each           = var.apps
 //  app_port           = each.value["app_port"]
